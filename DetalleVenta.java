@@ -16,10 +16,11 @@ public class DetalleVenta {
     public int getCantidad() {return cantidad;}
     public double getSubTotal() {return subtotal;}
 
+    //Se utilizó el Math.round para poder redondearlo a un número mas bien cerrado y que no saque muchos decimales
     @Override
     public String toString() {
-        return inventario + " | Cantidad: " + cantidad
-                + " | Precio unitario final: $" + Math.round(precioUnitarioFinal)
-                + " | Subtotal: $" + Math.round(subtotal);
+        return inventario + " Cantidad: " + cantidad+
+                ", Precio unitario final: $" + Math.round(precioUnitarioFinal)+
+                ", Subtotal: $" + Math.round(subtotal);
     }
 }

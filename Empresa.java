@@ -27,6 +27,12 @@ public class Empresa {
     public ArrayList<Prenda> getListaPrendas() {return listaPrendas;}
     public ArrayList<Cliente> getListaClientes() {return listaClientes;}
 
+    @Override
+    public String toString() {
+        return nombreComercial +
+                "NIT: " + NIT +
+                "Dirección: "+ direccion;
+    }
     // No permite dos sucursales con el mismo código
     public boolean registrarSucursal(String codigo, String nombre, String direccion, String ciudad) {
         for (Sucursal sucursal : listaSucursales) {
@@ -134,8 +140,4 @@ public class Empresa {
         return masVendida;
     }
 
-    @Override
-    public String toString() {
-        return nombreComercial + " | NIT: " + NIT + " | " + direccion;
-    }
 }
